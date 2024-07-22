@@ -1,33 +1,35 @@
-$('.like-btn').on('click', function() {
-    $(this).toggleClass('is-active');
- });
+// Initialize cart and total variables
+let cart = [];
+let total = 0;
 
- $('.minus-btn').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
-    var $input = $this.closest('div').find('input');
-    var value = parseInt($input.val());
- 
-    if (value > 1) {
-        value = value - 1;
-    } else {
-        value = 0;
-    }
- 
-    $input.val(value);
-});
- 
-$('.plus-btn').on('click', function(e) {
-    e.preventDefault();
-    var $this = $(this);
-    var $input = $this.closest('div').find('input');
-    var value = parseInt($input.val());
- 
-    if (value < 100) {
-        value = value + 1;
-    } else {
-        value = 100;
-    }
- 
-    $input.val(value);
-});
+// Function to add item to cart
+function addItem(name, price) {
+    cart.push({ name, price });
+    total += price;
+    updateCart();
+}
+
+// Function to update cart display
+function updateCart() {
+    const cartList = document.getElementById('cart-items');
+    const totalDisplay = document.getElementById('cart-total');
+    
+    // Clear existing cart items
+    cartList.innerHTML = '';
+    
+    // Update cart items and total
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        cartList.appendChild(li);
+    });
+    
+    totalDisplay.textContent = total;
+}
+
+// Function to clear the cart
+function clearCart() {
+    cart = [];
+    total = 0;
+    updateCart();
+}

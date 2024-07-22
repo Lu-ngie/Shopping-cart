@@ -1,178 +1,177 @@
-* {
-    box-sizing: border-box;
-  }
-   
-  html,
-  body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    background-color: black;
-    font-family: 'Roboto', sans-serif;
-  }
 
-  .shopping-cart {
-    width: 750px;
-    height: 423px;
-    margin: 80px auto;
-    background: #FFFFFF;
-    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
-    border-radius: 6px;
-   
-    display: flex;
-    flex-direction: column;
-  }
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .title {
-    height: 60px;
-    border-bottom: 1px solid #E1E8EE;
-    padding: 20px 30px;
-    color: #5E6977;
-    font-size: 18px;
-    font-weight: 400;
-  }
-   
-  .item {
-    padding: 20px 30px;
-    height: 120px;
-    display: flex;
-  }
-   
-  .item:nth-child(6) {
-    border-top:  1px solid #E1E8EE;
-    border-bottom:  1px solid #E1E8EE;
-  }
-  .buttons {
-    position: relative;
-    padding-top: 30px;
-    margin-right: 60px;
-  }
-  .delete-btn,
-  .like-btn {
-    display: inline-block;
-    Cursor: pointer;
-  }
-  .delete-btn {
-    width: 18px;
-    height: 17px;
-    background: url(&amp;amp;quot;delete-icn.svg&amp;amp;quot;) no-repeat center;
-  }
-   
-  .like-btn {
-    position: absolute;
-    top: 9px;
-    left: 15px;
-    background: url('twitter-heart.png');
-    width: 60px;
-    height: 60px;
-    background-size: 2900%;
-    background-repeat: no-repeat;
-  }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.navbar{
+  float:left;
+}
 
-  .is-active {
-    animation-name: animate;
-    animation-duration: .8s;
-    animation-iteration-count: 1;
-    animation-timing-function: steps(28);
-    animation-fill-mode: forwards;
-  }
-   
-  @keyframes animate {
-    0%   { background-position: left;  }
-    50%  { background-position: right; }
-    100% { background-position: right; }
-  }
-  .image {
-    margin-right: 50px;
-  }
-   
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #333; /* Dark text color */
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  .description {
-    padding-top: 10px;
-    margin-right: 60px;
-    width: 115px;
-  }
-   
-  .description span {
-    display: block;
-    font-size: 14px;
-    color: #43484D;
-    font-weight: 400;
-  }
-   
-  .description span:first-child {
-    margin-bottom: 5px;
-  }
-  .description span:last-child {
-    font-weight: 300;
-    margin-top: 8px;
-    color: #86939E;
-  }
-  .quantity {
-    padding-top: 20px;
-    margin-right: 60px;
-  }
-  .quantity input {
-    -webkit-appearance: none;
-    border: none;
-    text-align: center;
-    width: 32px;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-  }
-   
-  button[class*=btn] {
-    width: 30px;
-    height: 30px;
-    background-color: #E1E8EE;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .minus-btn img {
-    margin-bottom: 3px;
-  }
-  .plus-btn img {
-    margin-top: 2px;
-  }
-   
-  button:focus,
-  input:focus {
-    outline:0;
-  }
+.navbar-brand:hover {
+  color: #f7e2ef; /* Dark pink on hover */
+}
 
-  .total-price {
-    width: 83px;
-    padding-top: 27px;
-    text-align: center;
-    font-size: 16px;
-    color: #43484D;
-    font-weight: 300;
-  }
+.form-control {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
 
-  @media (max-width: 800px) {
-    .shopping-cart {
-      width: 100%;
-      height: auto;
-      overflow: hidden;
-    }
-    .item {
-      height: auto;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .image img {
-      width: 50%;
-    }
-    .image,
-    .quantity,
-    .description {
-      width: 100%;
-      text-align: center;
-      margin: 6px 0;
-    }
-    .buttons {
-      margin-right: 20px;
-    }
-  }
+.btn-outline-success {
+  padding: 8px 16px;
+  border: 1px solid #f8c7ea;
+  background-color: transparent;
+  color: #f5c7ef;
+  border-radius: 4px;
+}
+
+.btn-outline-success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hero section */
+.hero {
+  background-image: url('https://i.pinimg.com/236x/8c/cf/2f/8ccf2f073f34558a091de30a64ef351a.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero-cta {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #f3d8e9; /* Dark pink button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.hero-cta:hover {
+  background-color: #db56a2; /* Darker pink on hover */
+}
+
+/* Cart section */
+.cart {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cart h2 {
+  color: #333;
+}
+
+.cart p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.cart button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #c71585; /* Dark pink button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart button:hover {
+  background-color: #a30059; /* Darker pink on hover */
+}
+
+/* Products section */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  width: 30%; /* Adjust as needed */
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.product button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #c07fa7; /* Green add to cart button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #8b3067; /* Darker green on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
