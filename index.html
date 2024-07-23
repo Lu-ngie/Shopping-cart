@@ -5,82 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="main.js" defer></script>
+  
+  
 </head>
 <body>
-  <div class="container">
-    <!-- Navbar -->
-    <nav class="navbar bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">GRAFFITI CENTURY</a>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search Item</button>
-        </form>
-      </div>
-    </nav>
-    
-    <!-- Hero section -->
-    <section class="hero">
-      <div class="hero__container">
-        <h1 class="hero-title">WELCOME TO YOUR ULTIMATE HOODIE PLUG</h1>
-        <p class="hero-subtitle">Explore our latest products and shop today!</p>
-        <button class="hero-cta">SHOP NOW</button>
-      </div>
-      <div class="hero-background">
-      </div>
-    </section>
+  <!---LOGO-->
+  <h1>HOODIE GRAFFITI</h1>
+  
+  <!-- Hero section -->
+  <section class="hero">
+    <div class="hero__container">
+      <h2 class="hero-title">YOUR ULTIMATE HOODIE PLUG</h2>
+      <p class="hero-subtitle">Explore our latest products and shop today!</p>
+      <button class="hero-cta">SHOP NOW</button>
+    </div>
+    <div class="hero-background">
+    </div>
+  </section>
 
-    <h1>Your cart</h1>
-    
-    <!-- Products section -->
-    <div class="products">
-      <div class="product">
-        <img src="https://i.pinimg.com/236x/a1/24/7e/a1247ebcbe5864ce38bd07f044b278ee.jpg" alt="Image 1" class="image">
-        <h3>2 shade brown sweater with fanny pack<br>Size medium-large</h3>
-        <p>R 550</p>
-        <button onclick="addItem('Item 1', 550)">Add to Cart</button>
-      </div>
-      
-      <div class="product">
-        <img src="https://i.pinimg.com/236x/83/e0/ae/83e0aea5ad2e55d57a5237d3716219c7.jpg" alt="Image 2" class="image">
-        <h3>"THINK-ON pink sweater<br>Size small-medium</h3>
-        <p>R 200</p>
-        <button onclick="addItem('Item 2', 200)">Add to Cart</button>
-      </div>
-      
-      <div class="product">
-        <img src="https://i.pinimg.com/236x/0d/82/6d/0d826d698a399f021741fcf85bb32f47.jpg" alt="Image 3" class="image">
-        <h3>Nirvana grey winter sweater<br>Size large</h3>
-        <p>R 450</p>
-        <button onclick="addItem('Item 3', 450)">Add to Cart</button>
-      </div>
-      
-      <div class="product">
-        <img src="https://i.pinimg.com/236x/b1/14/d3/b114d39f18f49578129154f75c818539.jpg" alt="Image 4" class="image">
-        <h3>Cheers to that, mist hoodie<br>Size Large</h3>
-        <p>R 150</p>
-        <button onclick="addItem('Item 4', 150)">Add to Cart</button>
-      </div>
-    </div>
-    <!-- Cart section -->
-    <div class="cart">
-      <h2>Your Cart</h2>
-      <ul id="cart-items">
-        <!-- Cart items will be dynamically added here -->
-      </ul>
-      <p>Total: R<span id="cart-total">0</span></p>
-      <button onclick="clearCart()">Clear Cart</button>
+  <h2>Your cart</h2>
+  
+  <!-- Products section -->
+     <div class="products">
+    <div class="product">
+      <img src="https://i.pinimg.com/236x/a1/24/7e/a1247ebcbe5864ce38bd07f044b278ee.jpg" alt="Image 1" class="image">
+      <h3>2 shade brown sweater with fanny pack<br>Size medium-large</h3>
+      <p>R 550</p>
+      <button onclick="addItem('Item 1', 550)">Add to Cart</button>
     </div>
     
-    <!-- Footer section -->
-    <footer>
-      <p>&copy; 2024 HOODIE CENTURY. All rights reserved.</p>
-      <email>hoodiecentury@gmail.com</email>
-      <address>56 Athol street<br>highlands north<br>Balfour shopping centre</address>
-      <contac>011 345 7080</contac>
-    </footer>
+    <div class="product">
+      <img src="https://i.pinimg.com/236x/83/e0/ae/83e0aea5ad2e55d57a5237d3716219c7.jpg" alt="Image 2" class="image">
+      <h3>"THINK-ON pink sweater<br>Size small-medium</h3>
+      <p>R 200</p>
+      <button onclick="addItem('Item 2', 200)">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://i.pinimg.com/236x/0d/82/6d/0d826d698a399f021741fcf85bb32f47.jpg" alt="Image 3" class="image">
+      <h3>Nirvana ,grey winter sweater<br>medium</h3>
+      <p>R 450</p>
+      <button onclick="addItem('Item 3', 450)">Add to Cart</button>
+    </div>
+    
+    <div class="product">
+      <img src="https://i.pinimg.com/236x/b1/14/d3/b114d39f18f49578129154f75c818539.jpg" alt="Image 4" class="image">
+      <h3>Cheers to that, mist hoodie<br>Size Large</h3>
+      <p>R 150</p>
+      <button onclick="addItem('Item 4', 150)">Add to Cart</button>
+    </div>
   </div>
-
+  
+  <!-- Cart section -->
+  <div class="cart">
+    <h2>Checkout</h2>
+    <ul id="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </ul>
+    <p>Total: R<span id="cart-total">0</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+  
+  <!-- Footer-->
+  <footer>
+    <p>&copy; 2023 HOODIE CENTURY. All rights reserved.</p>
+    <a href="mailto:hoodiecentury@gmail.com">Contact Us</a>
+  </footer>
+  
   <script src="script.js"></script>
 </body>
 </html>
